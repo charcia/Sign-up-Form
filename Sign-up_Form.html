@@ -23,25 +23,25 @@
                 </div>
                 <div class="box1-2-middle">
                     <p id="form_text"><strong>Let's do this!</strong></p>
-                    <div id="form_container">
+                    <form action="#" method="get">
                         <div id="first_column">
                             <div>
                                 <label for="first_name">
                                     First Name:
                                 </label></br>
-                                <input name="first_name" id="first_name"> 
+                                <input name="first_name" id="first_name" class="input"> 
                             </div>
                             <div>
                                 <label for="email">
                                     Email:
                                 </label></br>
-                                <input name="email" id="email">
+                                <input name="email" id="email" class="input" type="email">
                             </div>
                             <div>
                                 <label for="password">
                                     Password:
                                 </label></br>
-                                <input name="password" id="password">
+                                <input name="password" id="password" class="input">
                             </div>
                         </div>
                         <div id="second_column">
@@ -49,25 +49,60 @@
                                 <label for="last_name">
                                     Last Name:
                                 </label></br>
-                                <input name="last_name" id="last_name"> 
+                                <input name="last_name" id="last_name" class="input"> 
                             </div>
                             <div>
                                 <label for="phone_number">
                                     Phone Number:
                                 </label></br>
-                                <input name="phone_number" id="phone_number">
+                                <input name="phone_number" id="phone_number" class="input" type="tel">
                             </div>
                             <div>
                                 <label for="confirm_password">
                                     Confirm Password:
                                 </label></br>
-                                <input name="confirm_password" id="confirm_password">
+                                <input name="confirm_password" id="confirm_password" class="input">
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="box1-2-bottom">bottom</div>
+                <div class="box1-2-bottom">
+                    <button id="create_account">Create Account</button>
+                    <p id="bottom-text">Already have an account? Log in</p>
+                </div>
             </div>
         </div>
     </body>
+    <script>
+
+        const FirstName='subhan'
+        const LastName='alizada'
+        const email='subhanalizada@gmail.com'
+        const password='Ainga666'
+        const PhoneNumber='5144580007'
+
+        var InpName=document.getElementById('first_name');
+        var InpLastName=document.getElementById('last_name');
+        var InpEmail=document.getElementById('email');
+        var InpPhoneNumber=document.getElementById('phone_number');
+        var InpPassword=document.getElementById('password');
+        var InpConfirm=document.getElementById('confirm_password');
+
+        const middleBox=document.getElementsByClassName('box1-2-middle');
+
+        function validation(){
+            alert('validation...');
+            if (middleBox.isActive){
+                //Verify if conditions are met for validation//
+            }
+        }
+
+        function emailValid(){
+            alert('blurred');
+        }
+
+        document.querySelector(input[type='email']).addEventListener('blur', function(){emailValid})
+        document.addEventListener('submit',function(){validation})
+
+    </script>
 </html>
